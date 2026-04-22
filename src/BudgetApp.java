@@ -20,14 +20,20 @@ public class BudgetApp {
         //                        " but the actual spend was " + spentString);
         // }
 
+        List<BudgetCategory> list = new ArrayList<>();
         while(scan.hasNextLine()) {
             String category = scan.nextLine();
             double limit = scan.nextDouble();
             double spent = scan.nextDouble();
             
-            List<BudgetCategory> list = new ArrayList<>();
-
             list.add(new BudgetCategory(category, limit, spent));
+
+            if(scan.hasNextLine()) scan.nextLine();
+        }
+
+        for (BudgetCategory b : list) {
+            String print = b.toString();
+            System.out.println(print);
         }
 
 
