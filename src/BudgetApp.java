@@ -20,12 +20,15 @@ public class BudgetApp {
         //                        " but the actual spend was " + spentString);
         // }
 
+        //an array list of budget category objects or instances of budget category
         List<BudgetCategory> list = new ArrayList<>();
+
         while(scan.hasNextLine()) {
             String category = scan.nextLine();
             double limit = scan.nextDouble();
             double spent = scan.nextDouble();
-            
+
+            //class TA helped me build out this logic through 15 minutes of chatting            
             list.add(new BudgetCategory(category, limit, spent));
 
             if(scan.hasNextLine()) scan.nextLine();
