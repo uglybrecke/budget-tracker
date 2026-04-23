@@ -48,8 +48,8 @@ public class BudgetCategory implements Comparable<BudgetCategory> {
     }
 
     public int compareTo(BudgetCategory other) {
-        if (this.difference > other.difference) {return 1;}
-        if (this.difference < other.difference) {return -1;}
+        if (this.difference < other.difference) {return 1;}
+        if (this.difference > other.difference) {return -1;}
         return 0;
     }
 }
