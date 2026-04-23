@@ -41,15 +41,15 @@ public class BudgetCategory implements Comparable<BudgetCategory> {
 
     @Override
     public String toString() {
-        return "BudgetCategory [/nname= " + name + 
-                               "/nlimit= " + limit + 
-                               "/nspent= " + spent + 
-                               "/ndifference= " + difference + "]";
+        return "BudgetCategory  \nname= " + name + 
+                               "\nlimit= " + limit + 
+                               "\nspent= " + spent + 
+                               "\ndifference= " + difference + "\n";
     }
 
     public int compareTo(BudgetCategory other) {
-        if (this.difference < other.difference) {return 1;}
-        if (this.difference > other.difference) {return -1;}
+        if (this.difference > other.difference) {return 1;}
+        if (this.difference < other.difference) {return -1;}
         return 0;
     }
 }
